@@ -1,0 +1,60 @@
+{
+    "name": "weathergator",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "scripts": {
+        "clean": "rm dist/*",
+        "build:dev": "webpack --mode development",
+        "build:prod": "webpack --mode production",
+        "start": "webpack server --hot --mode development",
+        "test": "jest"
+    },
+    "dependencies": {
+        "@reduxjs/toolkit": "^1.6.1",
+        "axios": "^0.21.1",
+        "luxon": "^2.0.1",
+        "normalizr": "^3.6.1",
+        "ol": "^6.5.0",
+        "ol-geocoder": "^4.1.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-redux": "^7.2.4",
+        "recharts": "^2.0.10"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.14.6",
+        "@babel/preset-env": "^7.14.7",
+        "@babel/preset-typescript": "^7.14.5",
+        "@types/luxon": "^1.27.1",
+        "@types/ol": "^6.5.1",
+        "@types/react": "^17.0.11",
+        "@types/react-dom": "^17.0.8",
+        "@types/uuid": "^8.3.1",
+        "autoprefixer": "^10.2.6",
+        "babel-jest": "^27.0.6",
+        "clean-webpack-plugin": "*",
+        "css-loader": "^5.2.6",
+        "html-webpack-plugin": "^5.3.2",
+        "husky": "^6.0.0",
+        "jest": "^27.0.5",
+        "mini-css-extract-plugin": "^1.6.2",
+        "prettier": "^2.3.1",
+        "react-hot-loader": "^4.13.0",
+        "ts-loader": "^9.2.3",
+        "typescript": "^4.3.4",
+        "uuid": "^3.4.0",
+        "webpack": "^5.40.0",
+        "webpack-cli": "^4.7.2",
+        "webpack-dev-server": "^3.11.2",
+        "webpack-merge": "^5.8.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "prettier —-write",
+            "pre-push": "npm run test"
+        }
+    }
+}
